@@ -1,0 +1,20 @@
+{
+  "name": "stellar",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "@pixi/canvas-graphics": "^7.2.0-beta",
+    "@pixi/canvas-renderer": "^7.2.0-beta",
+    "pixi.js": "^7.2.0-beta"
+  }
+}
