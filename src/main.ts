@@ -1,5 +1,5 @@
-import './style.css';
+import "./style.css";
 
-import { PixiApplication } from './ui/PixiApplication';
+import { Application } from "./ui/Application";
 
-new PixiApplication({columns:120, rows:30, size:40});
+new Application();
