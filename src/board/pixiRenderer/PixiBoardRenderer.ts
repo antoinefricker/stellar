@@ -45,7 +45,6 @@ export class PixiBoardRenderer implements IBoardRenderer {
       this._map.addTile(
         new MapTile(hexTile, groundTexture, pillarTexture),
         HexMapUtils.setPosition(board.hexMap, hexTile),
-        hexTile,
         zIndex
       );
     });

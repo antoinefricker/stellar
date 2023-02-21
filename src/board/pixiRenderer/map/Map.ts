@@ -1,6 +1,5 @@
 import * as PIXI from "pixi.js";
 import { board } from "../../Board";
-import { HexTile } from "../../../hex/map/types";
 import { Vec2 } from "../../../hex/geom/coordinates";
 
 export class Map extends PIXI.Container {
@@ -23,13 +22,8 @@ export class Map extends PIXI.Container {
     this.mask = this._maskGfx;
   }
 
-  public addTile(
-    tile: PIXI.Container,
-    position: Vec2,
-    hexTile: HexTile,
-    zIndex: number
-  ): void {
-    tile.position.set(position.x, position.y - hexTile.elevation * 8);
+  public addTile(tile: PIXI.Container, position: Vec2, zIndex: number): void {
+    tile.position.set(position.x, position.y);
     this._tiles.addChildAt(tile, zIndex);
   }
 
