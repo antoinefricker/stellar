@@ -13,10 +13,20 @@ export class HexMapUtils {
     let hexTiles: HexTile[] = [];
     for (let y = 0; y < rows; y++) {
       for (let x = 0; x < columns; x++) {
+        const elevation = Math.floor(Math.random() * 15);
         hexTiles.push({
           x: x,
           y: y,
-          elevation: Math.round(Math.max(0, Math.random() * 10 - 6)),
+          elevation:
+            elevation > 3
+              ? elevation > 11
+                ? elevation > 13
+                  ? elevation > 15
+                    ? 4
+                    : 3
+                  : 2
+                : 1
+              : 0,
         });
       }
     }

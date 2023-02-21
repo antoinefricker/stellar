@@ -5,7 +5,8 @@
 ### Roadmap
 
 - [x] add readme file
-- [ ] simplify pixi map renderer
+- [x] simplify `<PixiBoardRenderer>`
+- [ ] add lint options
 - [ ] add unit tests
 - [ ] map exploration with drag and drop
 - [ ] map exploration with minimap
