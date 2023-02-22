@@ -13,7 +13,7 @@ export class MapTile extends PIXI.Container {
 		ground.lineStyle(2, 0xffffff, 0.3);
 		ground.beginFill(groundColors[hexTile.elevation], 1);
 		for (let i = 0; i < 6; i++) {
-			let { x, y } = radialPosition(i);
+			const { x, y } = radialPosition(i);
 			i !== 0 ? ground.lineTo(x, y) : ground.moveTo(x, y);
 		}
 		ground.closePath();

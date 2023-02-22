@@ -6,7 +6,10 @@ class Board {
 	private _hexMap: HexMap;
 	private _renderer: IBoardRenderer;
 
-	constructor() {}
+	constructor(renderer?: IBoardRenderer, mapOptions?: Partial<HexMapOptions>) {
+		if (renderer) this.renderer = renderer;
+		if (mapOptions) this.buildHexMap(mapOptions);
+	}
 
 	public get renderer(): IBoardRenderer {
 		return this._renderer;

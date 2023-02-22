@@ -5,7 +5,7 @@ export class HexMapUtils {
 	public static createHexMap(options?: Partial<HexMapOptions>): HexMap {
 		const { columns = 20, rows = 20, size = 40, verticalPerspective = 0.6 } = options || {};
 
-		let hexTiles: HexTile[] = [];
+		const hexTiles: HexTile[] = [];
 		for (let y = 0; y < rows; y++) {
 			for (let x = 0; x < columns; x++) {
 				hexTiles.push({
