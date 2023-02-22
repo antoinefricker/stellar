@@ -15,6 +15,14 @@
   "dependencies": {
     "@pixi/canvas-graphics": "^7.2.0-beta",
     "@pixi/canvas-renderer": "^7.2.0-beta",
-    "pixi.js": "^7.2.0-beta"
-  }
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "pixi.js": "^7.2.0-beta",
+    "prettier": "^2.8.4"
+  },
+  "lint-staged": {
+    "*.{ts,js}": "eslint",
+    "*.{ts,js,json,md}": "prettier --write"
+}
 }
