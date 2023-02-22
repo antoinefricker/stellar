@@ -1,28 +1,32 @@
 {
-  "name": "stellar",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
-  },
-  "dependencies": {
-    "@pixi/canvas-graphics": "^7.2.0-beta",
-    "@pixi/canvas-renderer": "^7.2.0-beta",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "pixi.js": "^7.2.0-beta",
-    "prettier": "^2.8.4"
-  },
-  "lint-staged": {
-    "*.{ts,js}": "eslint",
-    "*.{ts,js,json,md}": "prettier --write"
-}
+	"name": "stellar",
+	"description": "",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"lint": "eslint .",
+		"format": "prettier --write --check \"**/*.+(js|md|json)\"",
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.53.0",
+		"@typescript-eslint/parser": "^5.53.0",
+		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.8.4",
+		"typescript": "^4.9.3",
+		"vite": "^4.1.0"
+	},
+	"dependencies": {
+		"lint-staged": "^13.1.2",
+		"pixi.js": "^7.2.0-beta"
+	},
+	"lint-staged": {
+		"*.{ts,js}": "lint",
+		"*.{ts,js,json,md}": "prettier --write"
+	}
 }
