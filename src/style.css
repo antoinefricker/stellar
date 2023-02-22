@@ -7,18 +7,9 @@
   text-rendering: optimizeLegibility;
 }
 
-a {
-  font-weight: 500;
-  color: #207586;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #276572;
-}
-
 body {
   margin: 0;
   display: grid; 
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; 
 }

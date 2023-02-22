@@ -1,5 +1,5 @@
-import "./style.css";
+import './style.css';
 
-import { Application } from "./ui/Application";
+import { Application } from './ui/Application';
 
 new Application();

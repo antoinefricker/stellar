@@ -7,4 +7,4 @@ export const DNW = 'NW';
 
 export type HexDirection = 'NE' | 'E' | 'SE' | 'SW' | 'W' | 'NW';
 
-export const HexDirections:HexDirection[] = [DNE, DE, DSE, DSW, DW, DNW]; 
+export const HexDirections: HexDirection[] = [DNE, DE, DSE, DSW, DW, DNW];
