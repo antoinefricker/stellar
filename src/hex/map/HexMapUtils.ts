@@ -13,20 +13,10 @@ export class HexMapUtils {
     let hexTiles: HexTile[] = [];
     for (let y = 0; y < rows; y++) {
       for (let x = 0; x < columns; x++) {
-        const elevation = Math.floor(Math.random() * 15);
         hexTiles.push({
           x: x,
           y: y,
-          elevation:
-            elevation > 3
-              ? elevation > 11
-                ? elevation > 13
-                  ? elevation > 15
-                    ? 4
-                    : 3
-                  : 2
-                : 1
-              : 0,
+          elevation: HexMapUtils.getRandElevation(),
         });
       }
     }
@@ -42,5 +32,14 @@ export class HexMapUtils {
       x: x * Math.sqrt(3) * map.size,
       y: y * 1.5 * map.size,
     };
+  }
+
+  private static getRandElevation(): number {
+    const elevation = Math.floor(Math.random() * 15);
+    if (elevation < 3) return 0;
+    if (elevation < 11) return 1;
+    if (elevation < 13) return 2;
+    if (elevation < 15) return 3;
+    return 4;
   }
 }
