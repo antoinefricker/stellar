@@ -23,7 +23,7 @@ Current preview
 -   [ ] loopable map on X-axis
 -   [ ] evaluate and prune displayed tiles depending on the viewport
 -   [ ] crash rendering test
--   [ ] performance dislay
+-   [ ] performance display
 
 ##### Avatar control
 
