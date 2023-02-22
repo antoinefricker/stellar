@@ -2,6 +2,10 @@
 
 ## An hex-tile map exploration
 
+Current preview
+
+![](screenshot.png)
+
 ### Roadmap
 
 -   [x] add readme file
