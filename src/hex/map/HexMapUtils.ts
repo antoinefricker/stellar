@@ -3,7 +3,7 @@ import { HexMap, HexMapOptions, HexTile } from './types';
 
 export class HexMapUtils {
 	public static createHexMap(options?: Partial<HexMapOptions>): HexMap {
-		const { columns = 20, rows = 20, size = 40, verticalPerspective = 0.6 } = options || {};
+		const { columns = 20, rows = 20, size = 40 } = options || {};
 
 		const hexTiles: HexTile[] = [];
 		for (let y = 0; y < rows; y++) {
@@ -15,7 +15,7 @@ export class HexMapUtils {
 				});
 			}
 		}
-		return { rows, columns, size, verticalPerspective, hexTiles };
+		return { rows, columns, size, hexTiles };
 	}
 
 	public static setPosition(map: HexMap, hexTile: HexTile): Vec2 {
