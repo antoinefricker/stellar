@@ -21,12 +21,12 @@ export class MapTile extends PIXI.Container {
 
 		this._coordsText = new PIXI.Text();
 		this._coordsText.style = new PIXI.TextStyle({
-			fontSize: 12,
+			fontSize: 16,
 			fill: 0xffffff,
 		});
-		this._coordsText.text = `[${hexTile.x}:${hexTile.y}] ${hexTile.elevation}`;
-		this._coordsText.x = -0.5 * board.hexMap.size;
-		this._coordsText.y = -6;
+		this._coordsText.text = `${hexTile.x}:${hexTile.y}`;
+		this._coordsText.x = -0.5 * this._coordsText.width;
+		this._coordsText.y = -0.5 * this._coordsText.height;
 		this.addChild(this._coordsText);
 	}
 }
