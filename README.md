@@ -14,16 +14,14 @@ Current preview
 -   [x] simplify `<PixiBoardRenderer>`
 -   [x] add eslint
 -   [x] add prettier
--   [ ] add unit tests
+-   [x] add unit tests
 
-##### Navigation
+##### Data persistence
 
--   [ ] map exploration with drag and drop
--   [ ] map exploration with minimap
--   [ ] loopable map on X-axis
--   [ ] evaluate and prune displayed tiles depending on the viewport
--   [ ] crash rendering test
--   [ ] performance display
+-   [ ] save map
+-   [ ] load map
+-   [ ] save avatar settings
+-   [ ] load avatar settings
 
 ##### Avatar control
 
@@ -33,20 +31,27 @@ Current preview
 -   [ ] pathfinding
 -   [ ] UI pathfinding
 
-##### Data persistence
-
--   [ ] save map
--   [ ] load map
--   [ ] save avatar settings
--   [ ] load avatar settings
-
 ##### Map generation
 
--   [ ] to be defined
+-   [ ] random seed research
+-   [ ] elevation
+-   [ ] terrain
 
 ##### Threejs
 
--   [ ] to be defined
+-   [ ] performance console
+-   [ ] navigation debug UI logger
+-   [ ] tiles rendering
+-   [ ] elevation rendering
+-   [ ] terrain rendering
+
+##### Navigation
+
+-   [ ] map exploration with drag and drop
+-   [ ] map exploration with minimap
+-   [ ] loopable map on X-axis
+-   [ ] evaluate and prune displayed tiles depending on the viewport
+-   [ ] crash rendering test
 
 ### Available commands
 
