@@ -20,24 +20,27 @@ Current preview
 
 ##### Data persistence
 
--   [ ] save map
+-   [x] save map
 -   [x] load map
--   [ ] save avatar settings
--   [ ] load avatar settings
+-   [ ] load, save, generate the map from UI
 
 ##### Avatar control
 
--   [ ] add a player
--   [ ] handle walkable characteristic
+-   [ ] avatar with movement
 -   [ ] keyboard navigation
+-   [ ] save avatar settings
+-   [ ] load avatar settings
+-   [ ] handle walkable characteristic
 -   [ ] pathfinding
 -   [ ] UI pathfinding
+-   [ ] multiple avatars movement
 
 ##### Map generation
 
 -   [ ] random seed research
 -   [ ] elevation
 -   [ ] terrain
+-   [ ] features
 -   [ ] optimize map IO model
         provide metrics (computation time, size, ...)
         see https://www.xarg.org/2014/03/javascript-bit-array/
@@ -46,13 +49,16 @@ Current preview
 ##### Threejs
 
 -   [ ] performance console
--   [ ] navigation debug UI logger
--   [ ] tiles rendering
--   [ ] elevation rendering
--   [ ] terrain rendering
+-   [ ] map tiles rendering
+-   [ ] map tiles elevation
+-   [ ] map tiles terrain
+-   [ ] map tiles features
+-   [ ] characters
+-   [ ] characters movements
 
 ##### Navigation
 
+-   [ ] UI navigation debug
 -   [ ] map exploration with drag and drop
 -   [ ] map exploration with minimap
 -   [ ] loopable map on X-axis
