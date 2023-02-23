@@ -42,9 +42,9 @@ Current preview
 -   [ ] terrain
 -   [ ] features
 -   [ ] optimize map IO model
-        provide metrics (computation time, size, ...)
-        see https://www.xarg.org/2014/03/javascript-bit-array/
-        see https://github.com/infusion/BitSet.js
+-   provide metrics (computation time, size, ...)
+-   see https://www.xarg.org/2014/03/javascript-bit-array/
+-   see https://github.com/infusion/BitSet.js
 
 ##### Threejs
 
