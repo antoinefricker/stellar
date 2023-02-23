@@ -21,23 +21,23 @@
 
 -   [ ] random seed research
 -   [ ] elevation
+-   [ ] [doc] elevation/terrain/features tables
 -   [ ] terrain
 -   [ ] features
 -   [ ] optimize map IO model
--   provide metrics (computation time, size, ...)
--   see https://www.xarg.org/2014/03/javascript-bit-array/
--   see https://github.com/infusion/BitSet.js
+    -   [ ] provide metrics (computation time, filesize, ...)
+    -   [ ] exclude a given file from prettier formatting
 
 ##### 📍 Avatar control
 
 -   [ ] avatar with movement
 -   [ ] keyboard navigation
--   [ ] save avatar settings
--   [ ] load avatar settings
 -   [ ] handle walkable characteristic
 -   [ ] pathfinding
 -   [ ] UI pathfinding
 -   [ ] multiple avatars movement
+-   [ ] save avatars settings
+-   [ ] load avatars settings
 
 ##### 📍 Threejs
 
