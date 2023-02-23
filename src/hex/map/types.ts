@@ -5,7 +5,7 @@ export type HexTile = Vec2 & {
 };
 
 export type HexMap = HexMapOptions & {
-	hexTiles: HexTile[];
+	tiles: HexTile[];
 };
 
 export type HexMapOptions = {
@@ -13,3 +13,5 @@ export type HexMapOptions = {
 	rows: number;
 	size: number;
 };
+
+export type MapJsonVO = HexMap;

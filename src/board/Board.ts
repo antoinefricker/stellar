@@ -8,7 +8,7 @@ class Board {
 
 	constructor(renderer?: IBoardRenderer, mapOptions?: Partial<HexMapOptions>) {
 		if (renderer) this.renderer = renderer;
-		if (mapOptions) this.buildHexMap(mapOptions);
+		if (mapOptions) this.generateHexMap(mapOptions);
 	}
 
 	public get renderer(): IBoardRenderer {
@@ -19,8 +19,8 @@ class Board {
 		this._renderer = renderer;
 	}
 
-	buildHexMap(options?: Partial<HexMapOptions>) {
-		this._hexMap = HexMapUtils.createHexMap(options);
+	generateHexMap(options?: Partial<HexMapOptions>) {
+		this._hexMap = HexMapUtils.generateHexMap(options);
 	}
 
 	public get hexMap(): HexMap {

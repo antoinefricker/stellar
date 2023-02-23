@@ -23,9 +23,9 @@ export class PixiBoardRenderer implements IBoardRenderer {
 		this._map = new Map();
 		this._app.stage.addChild(this._map);
 
-		board.hexMap.hexTiles.forEach((hexTile) => {
-			const zIndex = board.hexMap.columns * hexTile.y + hexTile.x;
-			this._map.addTile(new MapTile(hexTile), HexMapUtils.setPosition(board.hexMap, hexTile), zIndex);
+		board.hexMap.tiles.forEach((tile) => {
+			const zIndex = board.hexMap.columns * tile.y + tile.x;
+			this._map.addTile(new MapTile(tile), HexMapUtils.setPosition(board.hexMap, tile), zIndex);
 		});
 	}
 

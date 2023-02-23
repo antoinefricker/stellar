@@ -21,7 +21,7 @@ Current preview
 ##### Data persistence
 
 -   [ ] save map
--   [ ] load map
+-   [x] load map
 -   [ ] save avatar settings
 -   [ ] load avatar settings
 
@@ -38,6 +38,10 @@ Current preview
 -   [ ] random seed research
 -   [ ] elevation
 -   [ ] terrain
+-   [ ] optimize map IO model
+        provide metrics (computation time, size, ...)
+        see https://www.xarg.org/2014/03/javascript-bit-array/
+        see https://github.com/infusion/BitSet.js
 
 ##### Threejs
 

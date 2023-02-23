@@ -1,21 +1,39 @@
 import { Vec2 } from '../geom/coordinates';
-import { HexMap, HexMapOptions, HexTile } from './types';
+import { HexMap, HexMapOptions, HexTile, MapJsonVO } from './types';
 
 export class HexMapUtils {
-	public static createHexMap(options?: Partial<HexMapOptions>): HexMap {
+	public static generateHexMap(options?: Partial<HexMapOptions>): HexMap {
 		const { columns = 20, rows = 20, size = 40 } = options || {};
 
-		const hexTiles: HexTile[] = [];
+		const tiles: HexTile[] = [];
 		for (let y = 0; y < rows; y++) {
 			for (let x = 0; x < columns; x++) {
-				hexTiles.push({
-					x: x,
-					y: y,
+				tiles.push({
+					x,
+					y,
 					elevation: HexMapUtils.getRandElevation(),
 				});
 			}
 		}
-		return { rows, columns, size, hexTiles };
+		return { rows, columns, size, tiles };
+	}
+
+	public static async loadMap(path: string): Promise<HexMap | null> {
+		return fetch(`./data/${path}`)
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				return HexMapUtils.readMap(data);
+			})
+			.catch((error) => {
+				console.error(error);
+				return null;
+			});
+	}
+
+	public static readMap(data: MapJsonVO): HexMap {
+		return data as HexMap;
 	}
 
 	public static setPosition(map: HexMap, hexTile: HexTile): Vec2 {
