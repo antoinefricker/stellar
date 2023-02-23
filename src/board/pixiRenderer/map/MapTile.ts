@@ -1,15 +1,13 @@
-import * as PIXI from 'pixi.js';
 import { Vec2 } from '../../../hex/geom/coordinates';
 import { HexTile } from '../../../hex/map/types';
 import { board } from '../../Board';
+import { pixi } from '../pixi';
 
-export class MapTile extends PIXI.Container {
-	private _coordsText: PIXI.Text;
-
+export class MapTile extends pixi.Container {
 	constructor(hexTile: HexTile) {
 		super();
 
-		const ground = new PIXI.Graphics();
+		const ground = new pixi.Graphics();
 		ground.lineStyle(2, 0xffffff, 0.3);
 		ground.beginFill(groundColors[hexTile.elevation], 1);
 		for (let i = 0; i < 6; i++) {
@@ -19,15 +17,15 @@ export class MapTile extends PIXI.Container {
 		ground.closePath();
 		this.addChild(ground);
 
-		this._coordsText = new PIXI.Text();
-		this._coordsText.style = new PIXI.TextStyle({
+		const coordsText = new pixi.Text();
+		coordsText.style = new pixi.TextStyle({
 			fontSize: 16,
 			fill: 0xffffff,
 		});
-		this._coordsText.text = `${hexTile.x}:${hexTile.y}`;
-		this._coordsText.x = -0.5 * this._coordsText.width;
-		this._coordsText.y = -0.5 * this._coordsText.height;
-		this.addChild(this._coordsText);
+		coordsText.text = `${hexTile.x}:${hexTile.y}`;
+		coordsText.x = -0.5 * coordsText.width;
+		coordsText.y = -0.5 * coordsText.height;
+		this.addChild(coordsText);
 	}
 }
 

@@ -18,6 +18,25 @@ export class HexMapUtils {
 		return { rows, columns, size, tiles };
 	}
 
+	public static setPosition(map: HexMap, hexTile: HexTile): Vec2 {
+		const { x, y } = {
+			x: hexTile.x + (hexTile.y % 2 === 0 ? 0 : 0.5),
+			y: hexTile.y,
+		};
+		return {
+			x: x * Math.sqrt(3) * map.size,
+			y: y * 1.5 * map.size,
+		};
+	}
+
+	public static saveMap(map: HexMap, fileName: string): void {
+		const a: HTMLAnchorElement = document.createElement('a');
+		const file = new Blob([HexMapUtils.writeMap(map)], { type: 'text/plain' });
+		a.href = URL.createObjectURL(file);
+		a.download = fileName;
+		a.click();
+	}
+
 	public static async loadMap(path: string): Promise<HexMap | null> {
 		return fetch(`./data/${path}`)
 			.then((response) => {
@@ -32,19 +51,12 @@ export class HexMapUtils {
 			});
 	}
 
-	public static readMap(data: MapJsonVO): HexMap {
-		return data as HexMap;
+	private static writeMap(map: HexMap): string {
+		return JSON.stringify(map);
 	}
 
-	public static setPosition(map: HexMap, hexTile: HexTile): Vec2 {
-		const { x, y } = {
-			x: hexTile.x + (hexTile.y % 2 === 0 ? 0 : 0.5),
-			y: hexTile.y,
-		};
-		return {
-			x: x * Math.sqrt(3) * map.size,
-			y: y * 1.5 * map.size,
-		};
+	private static readMap(data: MapJsonVO): HexMap {
+		return data as HexMap;
 	}
 
 	private static getRandElevation(): number {

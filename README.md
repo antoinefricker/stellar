@@ -22,7 +22,7 @@ Current preview
 
 -   [x] save map
 -   [x] load map
--   [ ] load, save, generate the map from UI
+-   [x] load, save, generate the map from UI
 
 ##### Avatar control
 

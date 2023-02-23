@@ -19,12 +19,16 @@ class Board {
 		this._renderer = renderer;
 	}
 
-	generateHexMap(options?: Partial<HexMapOptions>) {
-		this._hexMap = HexMapUtils.generateHexMap(options);
+	public set hexMap(hexMap: HexMap) {
+		this._hexMap = hexMap;
 	}
 
 	public get hexMap(): HexMap {
 		return this._hexMap;
+	}
+
+	generateHexMap(options?: Partial<HexMapOptions>) {
+		this.hexMap = HexMapUtils.generateHexMap(options);
 	}
 }
 
