@@ -10,8 +10,10 @@ Current preview
 
 ##### Project initialization
 
--   [x] add readme file
--   [x] simplify `<PixiBoardRenderer>`
+-   [x] readme file
+-   [x] random map creation
+-   [x] hex and geom classes core structure
+-   [x] pixijs rendering
 -   [x] add eslint
 -   [x] add prettier
 -   [x] add unit tests
